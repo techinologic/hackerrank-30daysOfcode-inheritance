@@ -21,11 +21,7 @@ class Person {
 
 }
 class Student extends Person{
-
-
-    Student(String firstName, String lastName, int identification) {
-        super(firstName, lastName, identification);
-    }
+    private int[] testScores;
 
     /*
     *   Class Constructor
@@ -36,13 +32,44 @@ class Student extends Person{
     *   @param scores - An array of integers denoting the Person's test scores.
     */
     // Write your constructor here
-    private int[] testScores;
+
+    Student(String firstName, String lastName, int identification, int[] testScores) {
+        super(firstName, lastName, identification);
+        this.testScores = testScores;
+    }
+
+
+
     /*
     *   Method Name: calculate
     *   @return A character denoting the grade.
     */
     // Write your method here
+
+/*
+    public static String calculate() {
+        int ave = 0;
+        String grade = "";
+        int length =
+        for (int i = 0; i < ; i++) {
+
+        }
+
+        return grade;
+    }
+*/
+
+    public int[] getTestScores() {
+        return testScores;
+    }
+
+    public void setTestScores(int[] testScores) {
+        this.testScores = testScores;
+    }
 }
+
+
+
 class Solution {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -58,6 +85,12 @@ class Solution {
 
         Student s = new Student(firstName, lastName, id, testScores);
         s.printPerson();
-        System.out.println("Grade: " + s.calculate() );
+        //System.out.println("Grade: " + s.calculate() );
+
+        for (int n :
+                testScores) {
+            System.out.println(n);
+
+        }
     }
 }
